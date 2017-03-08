@@ -1,23 +1,23 @@
 package com.firebasekorea.chat.activities;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import com.firebasekorea.chat.R;
 import com.firebasekorea.chat.adpaters.MessageAdapter;
 import com.firebasekorea.chat.controllers.MessageController;
 import com.firebasekorea.chat.models.Message;
 import com.firebasekorea.chat.utils.UserUtil;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -41,7 +41,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ValueEventListener mMessageListener;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
